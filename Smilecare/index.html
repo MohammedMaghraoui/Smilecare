@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0891b2">
+<title>SmileCare</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main>
+<div class="top"><h1>🦷 SmileCare</h1>
+<select id="lang" aria-label="Language"><option value="en">English</option><option value="fr">Français</option><option value="ar">العربية</option></select></div>
+
+<section class="card">
+<h2 data-i="timer"></h2>
+<div class="big" id="time">02:00</div>
+<div class="zone" id="zone"></div>
+<div class="quad"><div id="q0"></div><div id="q1"></div><div id="q2"></div><div id="q3"></div></div>
+<div class="row"><button class="primary" id="go"></button><button id="stop" data-i="reset"></button></div>
+</section>
+
+<section class="card">
+<h2 data-i="today"></h2>
+<label class="item"><input type="checkbox" data-k="am"><span data-i="am"></span></label>
+<label class="item"><input type="checkbox" data-k="pm"><span data-i="pm"></span></label>
+<label class="item"><input type="checkbox" data-k="floss"><span data-i="floss"></span></label>
+<label class="item"><input type="checkbox" data-k="rinse"><span data-i="rinse"></span></label>
+<div id="custom"></div>
+<div class="row" style="margin-top:10px"><input id="newHabit" maxlength="40"><button class="primary" id="addHabit" style="flex:none;width:52px" aria-label="+">+</button></div>
+<div class="week" id="week"></div>
+</section>
+
+<section class="card">
+<div class="stat"><h2 style="margin:0" data-i="streak"></h2><b id="streak">0</b></div>
+<div class="muted" data-i="streakd"></div>
+</section>
+
+<section class="card">
+<div class="stat"><h2 style="margin:0" data-i="fl_title"></h2><b id="flN">0/7</b></div>
+<div class="week" id="flWeek"></div>
+<div class="muted" style="margin-top:10px"><span data-i="fl_prev"></span>: <b id="flPrev">0/7</b></div>
+</section>
+
+<section class="card">
+<h2 data-i="br_title"></h2>
+<div id="brTxt" class="muted" style="margin-bottom:10px"></div>
+<label class="muted" for="brDate" data-i="br_date"></label>
+<input type="date" id="brDate" style="margin:6px 0 8px">
+<button class="primary" id="brBtn" style="width:100%" data-i="br_btn"></button>
+</section>
+
+<section class="card">
+<h2 data-i="food_title"></h2>
+<div class="two">
+<div class="g"><h3 data-i="good"></h3><ul id="goodL"></ul></div>
+<div class="b"><h3 data-i="limit"></h3><ul id="limitL"></ul></div>
+</div>
+</section>
+
+<section class="card">
+<h2 data-i="dn_title"></h2>
+<input type="date" id="appt">
+<p class="muted" id="apptTxt" style="margin:10px 0 0"></p>
+</section>
+
+<section class="card">
+<h2 data-i="tip_title"></h2>
+<div id="tip" style="line-height:1.5"></div>
+</section>
+</main>
+
+<script src="main.js">
+</script>
+</body>
+</html>
